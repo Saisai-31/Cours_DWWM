@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            
+            background-color: red;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            position:relative;
+            animation-name:rouge;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rouge{
+            0%{left:0px;top:0px}
+            25%{left:200px;top:0px}
+            50%{left:200px;top:200px}
+            75%{left:0px;top:200px}
+            100%{left:0px;top:0px}
+        }
+        #btn2{
+            background-color: purple;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            position:relative;
+            animation-name:vialet;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vialet{
+            0%{left:0px;top:0px}
+            25%{left:0px;top:200px}
+            50%{left:200px;top:200px}
+            75%{left:200px;top:0px}
+            100%{left:0px;top:0px}
+        }
+        #score{
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+			text-align="center";
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="rejouer">REJOUER</button>
+        <div id="score">      
+        
+        <button id="btn"></button>        
+        <button id="btn2"></button> </div>  
+    <script>
+        //je sélectionne et stocke
+        let btn = document.getElementById("btn");
+        let btn2 = document.getElementById("btn2");
+        const score = document.getElementById("score");  
+        const rejouer = document.getElementById('rejouer');     
+        let compteur = 0;
+        // je sumets le cercle rouge (btn) à une action
+        btn.addEventListener('click',function(){
+            add(); // j'appelle la fonction add()               
+       })   
+       // je sumets le cercle blue (btn2) à une action
+       btn2.addEventListener('click',function(){
+        add(); // j'appelle la fonction add()
+       })
+       //  je mets le code commun aux deux cercles (btn et btn2) dans une fonction add()
+        function add(){
+            compteur = compteur + 1;
+            console.log(compteur,"bouton clické");
+            score.innerText=compteur;
+        }
+
+        setTimeout(function(){
+            //Je supprime les cercles
+            btn.remove();
+            btn2.remove();      
+
+        },10000);
+// je soumets le bouton rejouer à une action
+        rejouer.addEventListener('click', function(){
+            console.log('cliqué');
+            location.reload(); // rafraichir la page. fonction ayant le même role que le bouton rafraichor du brower
+        })
+        
+       
+      
+         
+    </script>
+    
+    
+    
+    
+    
+
+
+
+
+
+    <!-- <script>
+         document.getElementById("btn-red").textContent="allons-y";
+         const bouton = document.getElementById("btn-red");
+               let compteur = 0;
+               console.log(compteur, " compteur avant")
+         bouton.addEventListener('click', function(){
+         
+             compteur = compteur + 1;
+            console.log(compteur,"bouton clické");
+            
+         })
+    </script> -->
+</body>
+</html>

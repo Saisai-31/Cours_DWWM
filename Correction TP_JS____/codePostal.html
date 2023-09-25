@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form name="mf">
+		Entrez le code postal
+		<br><br>
+		<input type="" id="b1">
+		<br><br>
+		<input type="button"  style="background-color.red" value="trouve" onclick="test(mf)">
+		<br><br>
+		La  région est : <label id="label2" style="color.red"></label>
+		<br><br>
+	</form>
+
+	<script type="text/javascript">
+		function test(mf)
+		{ 
+			//je remet à blanc le résultat
+			document.getElementById("label2").innerHTML = ""
+
+			//je stocke le contenu de la zone de siasie
+			vpostal = document.mf.b1.value;
+
+			//j'extrais les deux premiers caractères du code postal
+			code = vpostal.substr(0,2);
+
+			switch(code)
+			{	case "75":
+				{
+					document.getElementById("label2").innerHTML = "idf";
+					break;
+				}
+				case "69":
+				{
+					document.getElementById("label2").innerHTML = "Auvergne-Rhône-Alpes";
+					break;
+				}
+				case "29":
+				{
+					document.getElementById("label2").innerHTML = "Bretagne";
+					break;
+				}
+				default:{
+					document.getElementById("label2").innerHTML = "code inconnu !";
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

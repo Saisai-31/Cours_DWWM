@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var compteur = 3;
+        function signal(){
+            document.write(compteur, '<br>');
+            compteur--;
+            if(compteur >= 0){
+                setTimeout(signal,1000);
+				//setTimeout(couc,3000);
+            }else
+            document.write("Lancement ! ");
+        }
+        signal();
+		
+		/*function couc(){
+			document.write("je suis lancé ! '<br>'");
+		}*/
+    </script>
+</body>
+</html>

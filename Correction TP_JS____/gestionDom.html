@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maclasse{
+            color:red;
+        }
+        #monid{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h1></h1>
+    <h2 id="bb"></h2>
+    <div class="cc"></div>
+        
+   
+    <script>
+        // j'utilise querySelector pour cibler une div
+        document.querySelector('div').innerHTML="salut le DWWM";
+        //querySelector cible h1
+        document.querySelector("h1").innerText= "coucou";
+
+        //querySelector cible un id
+        document.querySelector('#bb').innerHTML="Buenos";
+        
+        //querySelector cible une classe 
+        document.querySelector('.cc').innerHTML="afpa";
+
+        //créer un nouvel élément sur la page
+        const monH1 = document.createElement("h1"); 
+        console.log(monH1);
+        //Insérer du texte dans le nouvel élément
+        monH1.innerText = "Bien de chose à vous pour ce weekend";
+        //Intégrer le nouvel élément dans le body
+        document.body.appendChild(monH1);  
+        // j'assigne une classe css au nouvel élément au html crée (h1)
+        monH1.className="maclasse";
+         // j'assigne un id css au nouvel élément au html crée (h1)
+        monH1.id="monid";
+        const monP = document.getElementById("PremierParagraphe");
+        monP.setAttribute("id", "P_par");
+        console.log(monP);
+
+        
+
+        
+
+
+              
+    </script>
+</body>
+</html>

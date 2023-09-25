@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrigé TPJS15</title>
+</head>
+<body>
+    <script>
+        function addition(x,y){
+            if(typeof x !=="nombre" || typeof y!=="nombre"){
+                return "Erreur : veuillez entrer deux nombres!";
+            }
+            return x+y;
+        }
+        document.write(addition(5,5));
+        console.log(addition(5,5));
+
+        function minuteEnSeconde(minutes){
+            return minutes * 60;
+        }
+        let conversion = minuteEnSeconde(1000);
+        document.write(conversion);
+        console.log(conversion);
+
+        function increment(n){
+            return ++n;
+        }
+        let result = increment(10);
+        document.write(result);
+        console.log(result);
+
+        function CalculSurface(base, hauteur){
+            return base * hauteur /2;
+        }
+        document.write(CalculSurface(2,3));
+        console.log(CalculSurface(2,3));
+
+        function ReverseValeur(val){
+            return val.split("").reverse().join("");
+        }
+        document.write(ReverseValeur("salut les gars"));
+        console.log(ReverseValeur("salut les gars"));
+
+        function TrouverMaximum(a,b,c){
+            max = 0;
+            if(a >b){
+                max = a;
+            }
+            else{
+                max=b;
+            }
+            if(c>max){
+                max=c;
+            }
+            return max;
+        }
+        document.write(TrouverMaximum(12,15,36));
+        console.log(TrouverMaximum(12,15,36));
+
+        function trouverPremierElement(monTab){
+            return monTab[0];
+        }
+        document.write(trouverPremierElement([1,5,3]));
+        console.log(trouverPremierElement([1,5,3]));
+
+        function url(){
+            document.write(document.URL);
+            console.log(document.URL ,'<br>');
+        }
+        document.write(url(""));
+        console.log(url(""));
+
+        function ResteDivision(a,b){
+            return a % b;
+        }
+        document.write(ResteDivision(4,2));
+        console.log(ResteDivision(4,2));
+    </script>
+</body>
+</html>

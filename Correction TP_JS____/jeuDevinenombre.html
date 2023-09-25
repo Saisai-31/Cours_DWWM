@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu dévinette</title>
+</head>
+<body>
+    <script>
+        if(confirm("voulez-vous commencer le jeu ?")){
+            var nombreMagique = Math.floor(Math.random() * 10);
+            console.log(nombreMagique);
+            var coup = 0;
+            while(true){
+                coup++;
+                var val = prompt("votre chiffe ?");
+                if (val){
+                        if(val==nombreMagique){
+                        alert("Félicitations, vous avez mis " + coup + " coup(s)");
+                        break;
+                        }else if(val > nombreMagique){
+                            alert("Il est plus petit");
+                        }else
+                            alert("Il est plus grand");
+                }else{
+                        break;
+                }
+            }
+        }
+            
+        
+    </script>
+</body>
+</html>
