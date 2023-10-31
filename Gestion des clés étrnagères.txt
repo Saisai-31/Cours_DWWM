@@ -1,0 +1,7 @@
+Gestion des clés étrnagères
+
+1. Selectionner la table concernée
+2. Transformer les moteurs de stockage MyIsam en InnoDB
+3. cliquer sur la vue relationnelle
+3. Définir l'intégrité relationnelle
+4. Insérer les donnée et constater sur l'emlacement des clés l'apparition d'une liste déroulante, signe que ça marché
